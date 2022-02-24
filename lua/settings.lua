@@ -92,3 +92,6 @@ require'nvim-tree'.setup {
       },
     }
 
+require'bufferline'.setup{}
+require'lualine'.setup{}
+

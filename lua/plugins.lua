@@ -4,6 +4,8 @@ local use = require('packer').use
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
+  use 'kyazdani42/nvim-web-devicons'
+
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use 'hrsh7th/nvim-cmp'
@@ -13,15 +15,8 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-cmdline'
   use 'L3MON4D3/LuaSnip'
 
-  use { 'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = function()
-        require('lualine').setup()
-    end, }
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-        require("bufferline").setup{}
-    end, }
+  use 'nvim-lualine/lualine.nvim'
+  use 'akinsho/bufferline.nvim'
 
   use 'kyazdani42/nvim-tree.lua'
 
