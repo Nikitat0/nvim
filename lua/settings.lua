@@ -3,9 +3,24 @@ local exec = vim.api.nvim_exec
 local g = vim.g
 local opt = vim.opt
 
+cmd([[
+filetype indent plugin on
+syntax enable
+]])
+
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.smartindent = true
+
 opt.colorcolumn = "80"
 opt.cursorline = true
 opt.number = true
+
+opt.so = 1000
+
+opt.splitright = true
+opt.splitbelow = true
 
 opt.termguicolors = true
 cmd "colorscheme darcula"
