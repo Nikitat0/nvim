@@ -15,6 +15,8 @@ require("packer").startup(function()
   use "hrsh7th/cmp-cmdline"
   use "L3MON4D3/LuaSnip"
 
+  use "mhartington/formatter.nvim"
+
   use "nvim-lualine/lualine.nvim"
   use "akinsho/bufferline.nvim"
 

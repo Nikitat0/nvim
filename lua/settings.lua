@@ -3,13 +3,14 @@ local exec = vim.api.nvim_exec
 local g = vim.g
 local opt = vim.opt
 
-cmd([[
+cmd [[
 filetype indent plugin on
 syntax enable
-]])
+]]
 
 opt.expandtab = true
 opt.shiftwidth = 4
+
 opt.tabstop = 4
 opt.smartindent = true
 
@@ -57,6 +58,9 @@ cmp.setup {
         end,
       },
     },
+  },
+  mapping = {
+    ["<C-Space>"] = cmp.mapping.confirm { select = true },
   },
 }
 
@@ -112,3 +116,36 @@ require("nvim-tree").setup {
 
 require("bufferline").setup {}
 require("lualine").setup {}
+
+require("formatter").setup {
+  filetype = {
+    lua = {
+      function()
+        return {
+          exe = "stylua",
+          args = {
+            "--call-parentheses",
+            "None",
+            "--column-width",
+            "80",
+            "--indent-type",
+            "Spaces",
+            "--indent-width",
+            "2",
+            "-",
+          },
+          stdin = true,
+        }
+      end,
+    },
+    rust = {
+      function()
+        return {
+          exe = "rustfmt",
+          args = { "--emit=stdout" },
+          stdin = true,
+        }
+      end,
+    },
+  },
+}
