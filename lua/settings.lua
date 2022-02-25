@@ -3,10 +3,14 @@ local exec = vim.api.nvim_exec
 local g = vim.g
 local opt = vim.opt
 
-cmd [[
+cmd([[
 filetype indent plugin on
 syntax enable
-]]
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+]], true)
 
 opt.expandtab = true
 opt.shiftwidth = 4
