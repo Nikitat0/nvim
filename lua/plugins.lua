@@ -25,6 +25,4 @@ require("packer").startup(function()
   use "powerman/vim-plugin-ruscmd"
 
   use "doums/darcula"
-
-  use "andweeb/presence.nvim"
 end)
