@@ -109,7 +109,16 @@ require("nvim-tree").setup {
   },
 }
 --bufferline
-require("bufferline").setup {}
+require("bufferline").setup {
+  options = {
+    diagnostics = "nvim_lsp",
+    diagnostics_update_in_insert = true,
+    offsets = {
+      { filetype = "NvimTree", text = "File Explorer", text_align = "left" },
+    },
+    enforce_regular_tabs = true,
+  },
+}
 --status
 require("lualine").setup {}
 --theme
