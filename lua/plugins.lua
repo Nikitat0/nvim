@@ -16,6 +16,8 @@ require("packer").startup(function()
   --format
   use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"
+  --comment
+  use "numToStr/Comment.nvim"
   --icons
   use "kyazdani42/nvim-web-devicons"
   --file explorer

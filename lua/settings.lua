@@ -69,6 +69,8 @@ augroup FormatAutogroup
   autocmd BufWritePost * FormatWrite
 augroup END
 ]]
+--comment
+require("Comment").setup()
 --file explorer
 require("nvim-tree").setup {
   disable_netrw = true,
