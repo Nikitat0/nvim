@@ -8,12 +8,6 @@ filetype indent plugin on
 syntax enable
 ]]
 
-opt.expandtab = true
-opt.shiftwidth = 4
-opt.tabstop = 4
-opt.smartindent = true
-
-opt.colorcolumn = "80"
 opt.cursorline = true
 opt.number = true
 
@@ -29,6 +23,12 @@ lsp_installer.on_server_ready(function(server)
   server:setup {}
 end)
 --format
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.smartindent = true
+opt.colorcolumn = "80"
+
 require("formatter").setup {
   filetype = {
     lua = {

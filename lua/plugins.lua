@@ -14,6 +14,7 @@ require("packer").startup(function()
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   --format
+  use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"
   --icons
   use "kyazdani42/nvim-web-devicons"
