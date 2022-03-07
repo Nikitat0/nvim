@@ -102,6 +102,8 @@ require("nvim-tree").setup {
     },
   },
 }
+--project
+require("project_nvim").setup {}
 --bufferline
 require("bufferline").setup {
   options = {

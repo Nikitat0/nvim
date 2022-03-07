@@ -22,6 +22,8 @@ require("packer").startup(function()
   use "kyazdani42/nvim-web-devicons"
   --file explorer
   use "kyazdani42/nvim-tree.lua"
+  --project
+  use "ahmedkhalf/project.nvim"
   --bufferline
   use "akinsho/bufferline.nvim"
   --status
