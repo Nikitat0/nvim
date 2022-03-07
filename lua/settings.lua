@@ -119,6 +119,8 @@ require("bufferline").setup {
 --status
 require("lualine").setup {}
 --utils
+require("nvim-autopairs").setup {}
+
 require("autosave").setup {
   enabled = true,
   execution_message = "Saved at " .. vim.fn.strftime "%H:%M:%S",

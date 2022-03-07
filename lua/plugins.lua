@@ -27,6 +27,7 @@ require("packer").startup(function()
   --status
   use "nvim-lualine/lualine.nvim"
   --utils
+  use "windwp/nvim-autopairs"
   use "Pocco81/AutoSave.nvim"
   use "powerman/vim-plugin-ruscmd"
   --theme
