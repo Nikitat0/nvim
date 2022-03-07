@@ -35,17 +35,7 @@ require("formatter").setup {
       function()
         return {
           exe = "stylua",
-          args = {
-            "--call-parentheses",
-            "None",
-            "--column-width",
-            "80",
-            "--indent-type",
-            "Spaces",
-            "--indent-width",
-            "2",
-            "-",
-          },
+          args = { "-s", "-" },
           stdin = true,
         }
       end,
