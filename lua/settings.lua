@@ -17,6 +17,8 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.timeoutlen = 250
+
+opt.mouse = "a"
 --lsp
 local lsp_installer = require "nvim-lsp-installer"
 lsp_installer.on_server_ready(function(server)
@@ -101,6 +103,9 @@ require("nvim-tree").setup {
 --bufferline
 require("bufferline").setup {
   options = {
+    close_command = "bdelete %d",
+    right_mouse_command = "bdelete %d",
+    left_mouse_command = "buffer %d",
     diagnostics = "nvim_lsp",
     diagnostics_update_in_insert = true,
     offsets = {
