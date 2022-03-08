@@ -15,6 +15,10 @@ require("packer").startup(function()
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/cmp-git"
+
+  use "hrsh7th/vim-vsnip"
+  use "hrsh7th/vim-vsnip-integ"
   --format
   use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"

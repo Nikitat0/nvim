@@ -26,6 +26,45 @@ local lsp_installer = require "nvim-lsp-installer"
 lsp_installer.on_server_ready(function(server)
   server:setup {}
 end)
+--autocomplete
+local cmp = require "cmp"
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      vim.fn["vsnip#anonymous"](args.body)
+    end,
+  },
+  mapping = {
+    ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+    ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+    ["<C-c>"] = cmp.mapping {
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close(),
+    },
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<CR>"] = cmp.mapping.confirm { select = true },
+  },
+  sources = cmp.config.sources {
+    { name = "nvim_lsp" },
+    { name = "vsnip" },
+    { name = "buffer" },
+    { name = "path" },
+  },
+}
+
+local capabilities = require("cmp_nvim_lsp").update_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
+)
+local lspconfig = require "lspconfig"
+local servers = { "clangd", "rust_analyzer", "pyright", "tsserver" }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup { capabilities = capabilities }
+end
+
+cmp.setup.filetype(
+  "gitcommit",
+  { sources = cmp.config.sources { { name = "cmp_git" } } }
+)
 --format
 opt.tabstop = 4
 opt.shiftwidth = 4
