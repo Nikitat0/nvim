@@ -3,6 +3,24 @@ local default_opts = { noremap = true, silent = true }
 
 --file explorer
 map("n", "<F6>", ":NvimTreeRefresh<CR>:NvimTreeFocus<CR>", default_opts)
+--find
+map("n", "<leader>p", ":Telescope projects<CR>", default_opts)
+map("n", "<leader>f", ":Telescope find_files<CR>", default_opts)
+map("n", "<leader>s", ":Telescope live_grep<CR>", default_opts)
+
+map("n", "<leader>lr", ":Telescope lsp_references<CR>", default_opts)
+map("n", "<leader>ls", ":Telescope lsp_document_symbols<CR>", default_opts)
+map("n", "<leader>lS", ":Telescope lsp_workspace_symbols<CR>", default_opts)
+map("n", "<leader>la", ":Telescope lsp_code_actions<CR>", default_opts)
+map("n", "<leader>l", ":Telescope diagnostics<CR>", default_opts)
+map("n", "<leader>li", ":Telescope lsp_implementations<CR>", default_opts)
+map("n", "<leader>ld", ":Telescope lsp_definitions<CR>", default_opts)
+map("n", "<leader>lt", ":Telescope lsp_type_definitions<CR>", default_opts)
+
+map("n", "<leader>gf", ":Telescope git_files<CR>", default_opts)
+map("n", "<leader>gc", ":Telescope git_commits<CR>", default_opts)
+map("n", "<leader>gb", ":Telescope git_branches<CR>", default_opts)
+map("n", "<leader>gd", ":Telescope git_status<CR>", default_opts)
 --bufferline
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", default_opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", default_opts)

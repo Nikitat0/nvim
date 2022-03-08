@@ -3,6 +3,8 @@ local exec = vim.api.nvim_exec
 local g = vim.g
 local opt = vim.opt
 --vim
+g.mapleader = " "
+
 cmd [[
 filetype indent plugin on
 syntax enable
@@ -104,6 +106,7 @@ require("nvim-tree").setup {
 }
 --project
 require("project_nvim").setup {}
+require("telescope").load_extension "projects"
 --bufferline
 require("bufferline").setup {
   options = {

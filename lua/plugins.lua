@@ -2,6 +2,8 @@ vim.cmd [[packadd packer.nvim]]
 
 local use = require("packer").use
 require("packer").startup(function()
+  --libraries
+  use "nvim-lua/plenary.nvim"
   --plugin management
   use "wbthomason/packer.nvim"
   --lsp
@@ -22,6 +24,8 @@ require("packer").startup(function()
   use "kyazdani42/nvim-web-devicons"
   --file explorer
   use "kyazdani42/nvim-tree.lua"
+  --find
+  use "nvim-telescope/telescope.nvim"
   --project
   use "ahmedkhalf/project.nvim"
   --bufferline
