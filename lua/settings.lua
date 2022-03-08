@@ -76,31 +76,32 @@ require("Comment").setup()
 --file explorer
 require("nvim-tree").setup {
   disable_netrw = true,
-  open_on_setup = false,
+  open_on_setup = true,
   ignore_ft_on_setup = {},
+  auto_close = true,
+  sort_by = "modification_time",
+  hijack_unnamed_buffer_when_opening = true,
   hijack_directories = {
     enable = true,
     auto_open = true,
   },
-  auto_close = true,
-  auto_reload_on_write = true,
   hijack_cursor = true,
   update_cwd = true,
-  hijack_unnamed_buffer_when_opening = true,
   diagnostics = {
     enable = true,
     show_on_dirs = true,
   },
   trash = {
     cmd = "trash",
-    require_confirm = true,
+    require_confirm = false,
   },
   actions = {
     change_dir = {
-      enable = true,
+      enable = false,
     },
     open_file = {
       quit_on_open = true,
+      window_picker = { enable = false },
     },
   },
 }
@@ -122,7 +123,9 @@ require("bufferline").setup {
   },
 }
 --status
-require("lualine").setup {}
+require("lualine").setup {
+  options = { disabled_filetypes = { "NvimTree" } },
+}
 --utils
 require("nvim-autopairs").setup {}
 
