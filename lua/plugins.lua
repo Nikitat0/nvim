@@ -40,6 +40,13 @@ require("packer").startup(function()
   use "windwp/nvim-autopairs"
   use "Pocco81/AutoSave.nvim"
   use "powerman/vim-plugin-ruscmd"
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+    ft = { "markdown" },
+  }
   --theme
   use "doums/darcula"
 end)

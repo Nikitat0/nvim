@@ -38,8 +38,11 @@ map("n", "<S-Tab>j", ":BufferLineCloseLeft<CR>", default_opts)
 map("n", "<S-Tab>k", ":BufferLineCloseRight<CR>", default_opts)
 --utils
 map("i", "jj", "<Esc>", { noremap = true })
+map("t", "jj", "<C-\\><C-n>", { noremap = true })
 
 map("", "<up>", ':echoe "Use k"<CR>', { noremap = true, silent = false })
 map("", "<down>", ':echoe "Use j"<CR>', { noremap = true, silent = false })
 map("", "<left>", ':echoe "Use h"<CR>', { noremap = true, silent = false })
 map("", "<right>", ':echoe "Use l"<CR>', { noremap = true, silent = false })
+
+map("n", "<leader>v", ":MarkdownPreview<CR>", default_opts)
