@@ -42,7 +42,7 @@ cmp.setup {
       c = cmp.mapping.close(),
     },
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    ["<CR>"] = cmp.mapping.confirm(),
   },
   sources = cmp.config.sources {
     { name = "nvim_lsp" },

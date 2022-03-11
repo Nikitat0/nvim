@@ -12,13 +12,15 @@ require("packer").startup(function()
   --autocomplete
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-vsnip"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/cmp-git"
-
+  --snippets
   use "hrsh7th/vim-vsnip"
   use "hrsh7th/vim-vsnip-integ"
+  use "rafamadriz/friendly-snippets"
   --format
   use "editorconfig/editorconfig-vim"
   use "mhartington/formatter.nvim"

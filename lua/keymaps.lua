@@ -1,6 +1,16 @@
 local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
 
+--snippets
+vim.cmd [[
+imap <expr> <CR> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<CR>'
+smap <expr> <CR> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<CR>'
+
+imap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'
+smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
+]]
 --file explorer
 map(
   "n",
