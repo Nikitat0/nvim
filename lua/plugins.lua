@@ -26,6 +26,11 @@ require("packer").startup(function()
   use "mhartington/formatter.nvim"
   --comment
   use "numToStr/Comment.nvim"
+  --parser
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
   --icons
   use "kyazdani42/nvim-web-devicons"
   --file explorer

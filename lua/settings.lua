@@ -5,11 +5,6 @@ local opt = vim.opt
 --vim
 g.mapleader = " "
 
-cmd [[
-filetype indent plugin on
-syntax enable
-]]
-
 opt.cursorline = true
 opt.number = true
 
@@ -112,6 +107,14 @@ augroup END
 ]]
 --comment
 require("Comment").setup()
+--parser
+require("nvim-treesitter.configs").setup {
+  sync_install = false,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
 --file explorer
 require("nvim-tree").setup {
   disable_netrw = true,
