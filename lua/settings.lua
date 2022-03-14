@@ -100,9 +100,9 @@ require("formatter").setup {
 }
 
 cmd [[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost * FormatWrite
+augroup AutoFormatGroup
+  autocmd BufLeave * FormatWrite
+  autocmd VimLeavePre * bufdo FormatWrite | sleep
 augroup END
 ]]
 --comment
@@ -175,7 +175,7 @@ require("autosave").setup {
   enabled = true,
   execution_message = "Saved at " .. vim.fn.strftime "%H:%M:%S",
   clean_command_line_interval = 1000,
-  debounce_delay = 1000,
+  debounce_delay = 500,
 }
 --theme
 opt.termguicolors = true
