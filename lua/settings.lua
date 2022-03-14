@@ -4,17 +4,9 @@ local g = vim.g
 local opt = vim.opt
 --vim
 g.mapleader = " "
-
-opt.cursorline = true
-opt.number = true
-
-opt.so = 1000
-
 opt.splitright = true
 opt.splitbelow = true
-
-opt.timeoutlen = 250
-
+opt.timeoutlen = 400
 opt.mouse = "a"
 --lsp
 local lsp_installer = require "nvim-lsp-installer"

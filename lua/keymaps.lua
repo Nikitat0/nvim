@@ -1,6 +1,5 @@
 local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
-
 --snippets
 vim.cmd [[
 imap <expr> <CR> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<CR>'
@@ -11,6 +10,8 @@ smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 ]]
+--format
+map("n", "<F4>", ":FormatWrite<CR>", default_opts)
 --file explorer
 map(
   "n",
@@ -21,7 +22,7 @@ map(
 --find
 map("n", "<leader>p", ":Telescope projects<CR>", default_opts)
 map("n", "<leader>f", ":Telescope find_files<CR>", default_opts)
-map("n", "<leader>s", ":Telescope live_grep<CR>", default_opts)
+map("n", "<F3>", ":Telescope live_grep<CR>", default_opts)
 
 map("n", "<leader>lr", ":Telescope lsp_references<CR>", default_opts)
 map("n", "<leader>ls", ":Telescope lsp_document_symbols<CR>", default_opts)
@@ -36,6 +37,7 @@ map("n", "<leader>gf", ":Telescope git_files<CR>", default_opts)
 map("n", "<leader>gc", ":Telescope git_commits<CR>", default_opts)
 map("n", "<leader>gb", ":Telescope git_branches<CR>", default_opts)
 map("n", "<leader>gd", ":Telescope git_status<CR>", default_opts)
+map("n", "<leader>gs", ":Telescope git_stash<CR>", default_opts)
 --bufferline
 map("n", "<Tab>", ":BufferLineCycleNext<CR>", default_opts)
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", default_opts)
@@ -43,6 +45,7 @@ map("n", "<Tab><Tab>", ":BufferLinePick<CR>", default_opts)
 map("n", "<Tab>j", ":BufferLineMovePrev<CR>", default_opts)
 map("n", "<Tab>k", ":BufferLineMoveNext<CR>", default_opts)
 map("n", "<Tab>c", ":bdelete<CR>", default_opts)
+map("n", "<Tab>C", ":bdelete!<CR>", default_opts)
 map("n", "<Tab><Tab>c", ":BufferLinePickClose<CR>", default_opts)
 map("n", "<S-Tab>j", ":BufferLineCloseLeft<CR>", default_opts)
 map("n", "<S-Tab>k", ":BufferLineCloseRight<CR>", default_opts)
@@ -54,5 +57,7 @@ map("", "<up>", ':echoe "Use k"<CR>', { noremap = true, silent = false })
 map("", "<down>", ':echoe "Use j"<CR>', { noremap = true, silent = false })
 map("", "<left>", ':echoe "Use h"<CR>', { noremap = true, silent = false })
 map("", "<right>", ':echoe "Use l"<CR>', { noremap = true, silent = false })
+
+map("n", "<F1>", ":h ", { noremap = false })
 
 map("n", "<leader>v", ":MarkdownPreview<CR>", default_opts)
