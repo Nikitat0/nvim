@@ -1,5 +1,8 @@
 local map = vim.api.nvim_set_keymap
 local default_opts = { noremap = true, silent = true }
+--lsp
+map("n", "<F2>", ":lua vim.lsp.buf.rename()<CR>", default_opts)
+map("n", "<F7>", ":lua vim.lsp.buf.hover()<CR>", default_opts)
 --snippets
 vim.cmd [[
 imap <expr> <CR> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<CR>'
