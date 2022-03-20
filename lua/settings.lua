@@ -140,6 +140,8 @@ require("nvim-tree").setup {
 }
 --project
 require("project_nvim").setup {
+  detection_methods = { "pattern" },
+  patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn" },
   exclude_dirs = { os.getenv "HOME" },
 }
 require("telescope").load_extension "projects"
