@@ -112,7 +112,6 @@ require("nvim-tree").setup {
   disable_netrw = true,
   open_on_setup = true,
   ignore_ft_on_setup = {},
-  auto_close = true,
   sort_by = "modification_time",
   hijack_unnamed_buffer_when_opening = true,
   hijack_directories = {
@@ -140,7 +139,9 @@ require("nvim-tree").setup {
   },
 }
 --project
-require("project_nvim").setup {}
+require("project_nvim").setup {
+  exclude_dirs = { os.getenv "HOME" },
+}
 require("telescope").load_extension "projects"
 --bufferline
 require("bufferline").setup {
