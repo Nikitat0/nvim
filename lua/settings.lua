@@ -172,6 +172,7 @@ require("bufferline").setup {
 --status
 require("lualine").setup {
   options = { disabled_filetypes = { "NvimTree" } },
+  sections = { lualine_y = { "vim.fn.fnamemodify(vim.fn.getcwd(), ':t')" } },
 }
 --utils
 require("nvim-autopairs").setup {}
