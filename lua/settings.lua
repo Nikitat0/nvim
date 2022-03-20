@@ -169,6 +169,8 @@ require("autosave").setup {
   clean_command_line_interval = 1000,
   debounce_delay = 500,
 }
+
+require("nvim-lastplace").setup {}
 --theme
 opt.termguicolors = true
 cmd "colorscheme darcula"

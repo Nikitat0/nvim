@@ -54,6 +54,7 @@ require("packer").startup(function()
     end,
     ft = { "markdown" },
   }
+  use "ethanholz/nvim-lastplace"
   --theme
   use "doums/darcula"
 end)
