@@ -186,5 +186,9 @@ require("autosave").setup {
 
 require("nvim-lastplace").setup {}
 --theme
+opt.cursorline = true
+opt.number = true
+opt.relativenumber = true
+opt.scrolloff = 1000
 opt.termguicolors = true
 cmd "colorscheme darcula"
