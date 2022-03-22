@@ -55,6 +55,7 @@ require("packer").startup(function()
     ft = { "markdown" },
   }
   use "ethanholz/nvim-lastplace"
+  use "lewis6991/gitsigns.nvim"
   --theme
   use "doums/darcula"
 end)

@@ -187,6 +187,8 @@ require("autosave").setup {
 }
 
 require("nvim-lastplace").setup {}
+
+require("gitsigns").setup { numhl = true }
 --theme
 opt.cursorline = true
 opt.number = true
