@@ -56,6 +56,7 @@ require("packer").startup(function()
   }
   use "ethanholz/nvim-lastplace"
   use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
   --theme
   use "doums/darcula"
 end)
