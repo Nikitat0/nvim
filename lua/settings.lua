@@ -177,6 +177,13 @@ require("lualine").setup {
   sections = { lualine_y = { "vim.fn.fnamemodify(vim.fn.getcwd(), ':t')" } },
 }
 --utils
+function to_bufferline_buf()
+  cmd "silent only"
+  cmd "silent setlocal buflisted"
+end
+
+cmd "command! -nargs=? -complete=help H help <args> | lua to_bufferline_buf()"
+
 require("nvim-autopairs").setup {}
 
 require("autosave").setup {
