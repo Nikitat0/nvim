@@ -58,5 +58,5 @@ require("packer").startup(function()
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
   --theme
-  use "doums/darcula"
+  use "drewtempelmeyer/palenight.vim"
 end)

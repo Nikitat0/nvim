@@ -202,4 +202,8 @@ opt.number = true
 opt.relativenumber = true
 opt.scrolloff = 1000
 opt.termguicolors = true
-cmd "colorscheme darcula"
+cmd [[
+set background=dark
+let palenight_terminal_italics=1
+colorscheme palenight
+]]
