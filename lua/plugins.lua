@@ -59,4 +59,6 @@ require("packer").startup(function()
   use "tpope/vim-fugitive"
   --theme
   use "drewtempelmeyer/palenight.vim"
+  --rust
+  use "Saecki/crates.nvim"
 end)
