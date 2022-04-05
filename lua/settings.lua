@@ -1,13 +1,8 @@
 local cmd = vim.cmd
 local exec = vim.api.nvim_exec
 local g = vim.g
-local opt = vim.opt
 --vim
 g.mapleader = " "
-opt.splitright = true
-opt.splitbelow = true
-opt.timeoutlen = 400
-opt.mouse = "a"
 --lsp
 local lsp_installer = require "nvim-lsp-installer"
 lsp_installer.on_server_ready(function(server)
@@ -54,12 +49,6 @@ cmp.setup.filetype(
   { sources = cmp.config.sources { { name = "cmp_git" } } }
 )
 --format
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.expandtab = true
-opt.smartindent = true
-opt.colorcolumn = "80"
-
 require("formatter").setup {
   filetype = {
     lua = {
@@ -198,11 +187,6 @@ require("nvim-lastplace").setup {}
 
 require("gitsigns").setup { numhl = true }
 --theme
-opt.cursorline = true
-opt.number = true
-opt.relativenumber = true
-opt.scrolloff = 1000
-opt.termguicolors = true
 cmd [[
 set background=dark
 let palenight_terminal_italics=1
