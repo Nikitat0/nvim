@@ -176,13 +176,6 @@ cmd "command! -nargs=? -complete=help H help <args> | lua to_bufferline_buf()"
 
 require("nvim-autopairs").setup {}
 
-require("autosave").setup {
-  enabled = true,
-  execution_message = "Saved at " .. vim.fn.strftime "%H:%M:%S",
-  clean_command_line_interval = 1000,
-  debounce_delay = 500,
-}
-
 require("nvim-lastplace").setup {}
 
 require("gitsigns").setup { numhl = true }
