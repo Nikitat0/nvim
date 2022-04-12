@@ -27,5 +27,14 @@ require("formatter").setup {
         }
       end,
     },
+    python = {
+      function()
+        return {
+          exe = "autopep8",
+          args = { "-" },
+          stdin = true,
+        }
+      end,
+    },
   },
 }
