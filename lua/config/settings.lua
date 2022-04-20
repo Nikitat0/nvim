@@ -88,6 +88,10 @@ require("nvim-tree").setup {
       window_picker = { enable = false },
     },
   },
+  git = {
+    enable = true,
+    ignore = false,
+  },
 }
 --project
 require("project_nvim").setup {
