@@ -44,6 +44,11 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup { capabilities = capabilities }
 end
 
+cmp.setup.cmdline(":", { sources = { { name = "cmdline" } } })
+
+cmp.setup.cmdline("/", { sources = { { name = "buffer" } } })
+cmp.setup.cmdline("?", { sources = { { name = "buffer" } } })
+
 cmp.setup.filetype(
   "gitcommit",
   { sources = cmp.config.sources { { name = "cmp_git" } } }
