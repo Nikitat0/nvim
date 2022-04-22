@@ -11,7 +11,7 @@ require("crates").setup {
     copy_register = '"',
     style = "minimal",
     border = "none",
-    version_date = false,
+    show_version_date = false,
     max_height = 30,
     min_width = 20,
     keys = {
@@ -20,10 +20,9 @@ require("crates").setup {
       select_alt = { "s" },
       copy_version = { "yy" },
       toggle_feature = { "<cr>" },
-      goto_feature = { "gd", "K" },
-      jump_forward_feature = { "<c-i>" },
-      jump_back_feature = { "<c-o>" },
+      goto_item = { "gd", "K" },
+      jump_forward = { "<c-i>" },
+      jump_back = { "<c-o>" },
     },
   },
-  cmp = { insert_closing_quote = true },
 }
