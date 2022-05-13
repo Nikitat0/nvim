@@ -23,7 +23,6 @@ map(
   default_opts
 )
 --find
-map("n", "<leader>p", ":Telescope projects<CR>", default_opts)
 map("n", "<leader>f", ":Telescope find_files<CR>", default_opts)
 map("n", "<F3>", ":Telescope live_grep<CR>", default_opts)
 

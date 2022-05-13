@@ -98,25 +98,6 @@ require("nvim-tree").setup {
     ignore = false,
   },
 }
---project
-require("project_nvim").setup {
-  detection_methods = { "pattern" },
-  patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn" },
-  exclude_dirs = { os.getenv "HOME" },
-}
-require("telescope").load_extension "projects"
-
-function new_project(...)
-  local path = select(1, ...)
-  if path == nil then
-    path = "."
-  end
-  os.execute("mkdir -p " .. path)
-  cmd("cd " .. path)
-  os.execute "git init"
-  cmd("NvimTreeOpen " .. path)
-end
-cmd "command -nargs=? -complete=file NewProject lua new_project(<f-args>)"
 --status
 require("lualine").setup {
   options = { disabled_filetypes = { "NvimTree" } },

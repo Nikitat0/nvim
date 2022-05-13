@@ -37,8 +37,6 @@ require("packer").startup(function()
   use "kyazdani42/nvim-tree.lua"
   --find
   use "nvim-telescope/telescope.nvim"
-  --project
-  use "ahmedkhalf/project.nvim"
   --status
   use "nvim-lualine/lualine.nvim"
   --utils
