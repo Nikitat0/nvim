@@ -39,8 +39,6 @@ require("packer").startup(function()
   use "nvim-telescope/telescope.nvim"
   --project
   use "ahmedkhalf/project.nvim"
-  --bufferline
-  use "akinsho/bufferline.nvim"
   --status
   use "nvim-lualine/lualine.nvim"
   --utils

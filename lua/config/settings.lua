@@ -117,33 +117,12 @@ function new_project(...)
   cmd("NvimTreeOpen " .. path)
 end
 cmd "command -nargs=? -complete=file NewProject lua new_project(<f-args>)"
---bufferline
-require("bufferline").setup {
-  options = {
-    close_command = "bdelete %d",
-    right_mouse_command = "bdelete %d",
-    left_mouse_command = "buffer %d",
-    diagnostics = "nvim_lsp",
-    diagnostics_update_in_insert = true,
-    offsets = {
-      { filetype = "NvimTree", text = "File Explorer", text_align = "left" },
-    },
-    enforce_regular_tabs = true,
-  },
-}
 --status
 require("lualine").setup {
   options = { disabled_filetypes = { "NvimTree" } },
   sections = { lualine_y = { "vim.fn.fnamemodify(vim.fn.getcwd(), ':t')" } },
 }
 --utils
-function to_bufferline_buf()
-  cmd "silent only"
-  cmd "silent setlocal buflisted"
-end
-
-cmd "command! -nargs=? -complete=help H help <args> | lua to_bufferline_buf()"
-
 require("nvim-autopairs").setup {}
 
 require("nvim-lastplace").setup {}
