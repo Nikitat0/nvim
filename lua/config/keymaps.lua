@@ -4,10 +4,6 @@ local map = require "config.keymap"
 map { "<F2>", vim.lsp.buf.rename }
 map { "<F7>", vim.lsp.buf.hover }
 
---find
-map { "<leader>f", "<Cmd>Telescope find_files<CR>" }
-map { "<F3>", "<Cmd>Telescope live_grep<CR>" }
-
 map { "<leader>lr", "<Cmd>Telescope lsp_references<CR>" }
 map { "<leader>ls", "<Cmd>Telescope lsp_document_symbols<CR>" }
 map { "<leader>lS", "<Cmd>Telescope lsp_workspace_symbols<CR>" }
@@ -43,7 +39,6 @@ map { "<F4>", "<Cmd>FormatWrite<CR>" }
 --file explorer
 map { "<F6>", "<Cmd>NvimTreeRefresh<CR><Cmd>NvimTreeFindFileToggle<CR>" }
 --buffers
-map { "<Tab>", "<Cmd>Telescope buffers<CR>" }
 map { "<Tab>c", "<Cmd>bdelete<CR>" }
 map { "<Tab>C", "<Cmd>bdelete!<CR>" }
 --utils
