@@ -98,6 +98,8 @@ require("nvim-tree").setup {
     ignore = false,
   },
 }
+--find
+require("telescope").load_extension "ui-select"
 --status
 require("lualine").setup {
   options = { disabled_filetypes = { "NvimTree" } },
