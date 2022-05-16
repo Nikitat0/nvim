@@ -111,9 +111,3 @@ require("nvim-autopairs").setup {}
 require("nvim-lastplace").setup {}
 
 require("gitsigns").setup { numhl = true }
---theme
-cmd [[
-set background=dark
-let palenight_terminal_italics=1
-colorscheme palenight
-]]
