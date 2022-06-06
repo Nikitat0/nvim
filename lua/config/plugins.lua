@@ -40,6 +40,8 @@ require("packer").startup(function()
   use "nvim-telescope/telescope-ui-select.nvim"
   --status
   use "nvim-lualine/lualine.nvim"
+  --ui
+  use "stevearc/dressing.nvim"
   --utils
   use "windwp/nvim-autopairs"
   use "Pocco81/AutoSave.nvim"

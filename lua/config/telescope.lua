@@ -13,7 +13,6 @@ telescope.setup {
     },
   },
 }
-telescope.load_extension "ui-select"
 
 local map = require "config.keymap"
 local builtins = require "telescope.builtin"
