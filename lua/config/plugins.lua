@@ -44,7 +44,7 @@ require("packer").startup(function()
   use "stevearc/dressing.nvim"
   --utils
   use "windwp/nvim-autopairs"
-  use "Pocco81/AutoSave.nvim"
+  use "Pocco81/auto-save.nvim"
   use "powerman/vim-plugin-ruscmd"
   use {
     "iamcco/markdown-preview.nvim",
