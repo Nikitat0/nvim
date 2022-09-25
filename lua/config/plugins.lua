@@ -23,7 +23,7 @@ require("packer").startup(function()
   use "rafamadriz/friendly-snippets"
   --format
   use "editorconfig/editorconfig-vim"
-  use "mhartington/formatter.nvim"
+  use "sbdchd/neoformat"
   --comment
   use "numToStr/Comment.nvim"
   --parser

@@ -1,40 +1,8 @@
-require("formatter").setup {
-  filetype = {
-    lua = {
-      function()
-        return {
-          exe = "stylua",
-          args = { "-s", "-" },
-          stdin = true,
-        }
-      end,
-    },
-    rust = {
-      function()
-        return {
-          exe = "rustfmt",
-          args = { "+nightly", "--emit=stdout" },
-          stdin = true,
-        }
-      end,
-    },
-    cpp = {
-      function()
-        return {
-          exe = "clang-format",
-          args = { "-" },
-          stdin = true,
-        }
-      end,
-    },
-    python = {
-      function()
-        return {
-          exe = "autopep8",
-          args = { "-" },
-          stdin = true,
-        }
-      end,
-    },
-  },
+local map = require "config.keymap"
+map { "<F4>", "<Cmd>Neoformat<CR>" }
+
+vim.g.neoformat_rust_rustfmt = {
+  exe = "rustfmt",
+  args = { "+nightly" },
+  stdin = 1,
 }
