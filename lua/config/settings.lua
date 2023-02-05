@@ -21,7 +21,6 @@ require("nvim-treesitter.configs").setup {
 --file explorer
 require("nvim-tree").setup {
   disable_netrw = true,
-  open_on_setup = true,
   ignore_ft_on_setup = {},
   sort_by = "modification_time",
   hijack_unnamed_buffer_when_opening = true,
@@ -53,6 +52,23 @@ require("nvim-tree").setup {
     ignore = false,
   },
 }
+
+local function open_nvim_tree(data)
+  local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+  local directory = vim.fn.isdirectory(data.file) == 1
+
+  if not no_name and not directory then
+    return
+  end
+
+  if directory then
+    vim.cmd.cd(data.file)
+  end
+
+  require("nvim-tree.api").tree.open()
+end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 --find
 require("telescope").load_extension "ui-select"
 --status
