@@ -5,7 +5,9 @@ require("dressing").setup {
     border = "rounded",
     relative = "win",
     prefer_width = 0.4,
-    winblend = 0,
+    win_options = {
+      winblend = 0,
+    }
   },
   select = {
     enabled = false,
