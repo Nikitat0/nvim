@@ -4,10 +4,13 @@ local g = vim.g
 --vim
 g.mapleader = " "
 --lsp
-local lsp_installer = require "nvim-lsp-installer"
-lsp_installer.on_server_ready(function(server)
-  server:setup {}
-end)
+require("mason").setup()
+require("mason-lspconfig").setup()
+require("mason-lspconfig").setup_handlers {
+  function(server_name)
+    require("lspconfig")[server_name].setup {}
+  end,
+}
 --comment
 require("Comment").setup()
 --parser
