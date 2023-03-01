@@ -85,3 +85,8 @@ require("nvim-autopairs").setup {}
 require("nvim-lastplace").setup {}
 
 require("gitsigns").setup { numhl = true }
+
+vim.api.nvim_call_function("system", { "xkb-switch" })
+if vim.v.shell_error == 0 then
+  require("xkbswitch").setup()
+end

@@ -46,7 +46,7 @@ require("packer").startup(function()
   --utils
   use "windwp/nvim-autopairs"
   use "Pocco81/auto-save.nvim"
-  use "powerman/vim-plugin-ruscmd"
+  use "ivanesmantovich/xkbswitch.nvim"
   use {
     "iamcco/markdown-preview.nvim",
     run = function()
