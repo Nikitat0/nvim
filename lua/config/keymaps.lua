@@ -8,7 +8,6 @@ map { "<leader>lr", "<Cmd>Telescope lsp_references<CR>" }
 map { "<leader>ls", "<Cmd>Telescope lsp_document_symbols<CR>" }
 map { "<leader>lS", "<Cmd>Telescope lsp_workspace_symbols<CR>" }
 map { "<leader>la", vim.lsp.buf.code_action }
-map { "<leader>lA", vim.lsp.buf.range_code_action }
 map { "<leader>l", "<Cmd>Telescope diagnostics<CR>" }
 map { "<leader>li", "<Cmd>Telescope lsp_implementations<CR>" }
 map { "<leader>ld", "<Cmd>Telescope lsp_definitions<CR>" }
