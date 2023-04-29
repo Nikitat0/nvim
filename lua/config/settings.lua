@@ -24,7 +24,6 @@ require("nvim-treesitter.configs").setup {
 --file explorer
 require("nvim-tree").setup {
   disable_netrw = true,
-  ignore_ft_on_setup = {},
   sort_by = "modification_time",
   hijack_unnamed_buffer_when_opening = true,
   hijack_directories = {
