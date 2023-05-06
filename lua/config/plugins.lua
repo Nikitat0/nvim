@@ -58,7 +58,7 @@ require("packer").startup(function()
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
   --theme
-  use "daschw/leaf.nvim"
+  use "ellisonleao/gruvbox.nvim"
   --rust
   use "Saecki/crates.nvim"
 end)
