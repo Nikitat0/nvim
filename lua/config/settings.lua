@@ -1,6 +1,7 @@
 local cmd = vim.cmd
 local exec = vim.api.nvim_exec
 local g = vim.g
+local map = require "config.keymap"
 --vim
 g.mapleader = " "
 --lsp
@@ -89,3 +90,10 @@ vim.api.nvim_call_function("system", { "xkb-switch" })
 if vim.v.shell_error == 0 then
   require("xkbswitch").setup()
 end
+
+g.tmux_navigator_no_mappings = 1
+g.tmux_navigator_save_on_switch = 1
+map { "<A-h>", "<Cmd>TmuxNavigateLeft<CR>" }
+map { "<A-j>", "<Cmd>TmuxNavigateDown<CR>" }
+map { "<A-k>", "<Cmd>TmuxNavigateUp<CR>" }
+map { "<A-l>", "<Cmd>TmuxNavigateRight<CR>" }
