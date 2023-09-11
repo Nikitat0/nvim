@@ -59,7 +59,7 @@ require("packer").startup(function()
   use "tpope/vim-fugitive"
   use "christoomey/vim-tmux-navigator"
   --theme
-  use "ellisonleao/gruvbox.nvim"
+  use "navarasu/onedark.nvim"
   --rust
   use "Saecki/crates.nvim"
 end)
