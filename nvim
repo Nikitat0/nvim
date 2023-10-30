@@ -1,0 +1,3 @@
+#!/bin/sh
+docker compose up --no-recreate --build -d
+docker compose exec -ti nvim /usr/bin/nvim

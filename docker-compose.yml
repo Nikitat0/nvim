@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nvim:
+    build: .
+    volumes:
+      - ./:/root/.config/nvim
+      - ./local:/root/.local
