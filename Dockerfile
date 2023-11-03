@@ -10,11 +10,8 @@ RUN add-apt-repository ppa:neovim-ppa/unstable && \
     apt-get clean
 
 RUN apt-get update && \
-    apt-get install -y git && \
-    apt-get clean
-
-RUN apt-get update && \
-    apt-get install -y gcc && \
+    apt-get install -y \
+    git gcc curl python3 python3-pip python3-venv ripgrep fd-find && \
     apt-get clean
 
 CMD ["tail", "-f", "/dev/null"]
