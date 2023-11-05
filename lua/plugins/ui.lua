@@ -11,7 +11,6 @@ return {
     init = function()
       keymap { "<F6>", "<Cmd>Neotree toggle position=current<CR>" }
       require("neo-tree").setup {
-        nesting_rules = {},
         filesystem = {
           follow_current_file = {
             enabled = true,
