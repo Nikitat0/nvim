@@ -11,11 +11,17 @@ return function(args)
       opts[k] = v
     end
   end
-  local mode = opts.mode
+  local modes = opts.mode
+  if type(modes) == "string" then
+    modes = { modes }
+  end
   opts.mode = nil
   if type(rhs) == "function" then
     opts["callback"] = rhs
     rhs = "<Nop>"
   end
-  vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+  for _, mode in pairs(modes) do
+    vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+  end
+  -- TODO: Maybe rewrite using vim.keymap?
 end
