@@ -50,7 +50,7 @@ return {
         end,
       }
       keymap {
-        "<F11>",
+        "<F12>c",
         function()
           pickers.colorscheme { enable_preview = true }
         end,
