@@ -1,8 +1,13 @@
-version: '3'
+version: "3"
 
 services:
   nvim:
     build: .
+    stop_signal: SIGINT
     volumes:
       - ./:/root/.config/nvim
       - ./local:/root/.local
+      - mnt:/mnt
+
+volumes:
+  mnt:
