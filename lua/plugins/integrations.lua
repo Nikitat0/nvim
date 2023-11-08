@@ -2,7 +2,7 @@ local keymap = require "keymap"
 
 return {
   {
-    "christoomty/vim-tmux-navigator",
+    "christoomey/vim-tmux-navigator",
     cond = function()
       return os.getenv "TMUX" ~= nil
     end,
