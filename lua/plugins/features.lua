@@ -5,4 +5,9 @@ return {
       require "remember"
     end,
   },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {},
+  },
 }
