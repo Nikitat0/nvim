@@ -10,4 +10,14 @@ return {
     event = "InsertEnter",
     opts = {},
   },
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      ignore = "^(%s*)$",
+      mappings = {
+        basic = true,
+        extra = true,
+      },
+    },
+  },
 }
