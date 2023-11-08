@@ -9,7 +9,6 @@ return {
       "nui",
     },
     init = function()
-      keymap { "<F6>", "<Cmd>Neotree toggle position=current<CR>" }
       require("neo-tree").setup {
         filesystem = {
           follow_current_file = {
@@ -19,6 +18,7 @@ return {
           use_libuv_file_watcher = true,
         },
       }
+      keymap { "<F6>", "<Cmd>Neotree toggle reveal position=current<CR>" }
     end,
   },
   {
