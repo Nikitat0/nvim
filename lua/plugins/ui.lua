@@ -59,11 +59,8 @@ return {
     end,
   },
   {
-    "nvim-telescope/telescope-ui-select.nvim",
-    dependencies = { "telescope" },
-    init = function()
-      require("telescope").load_extension "ui-select"
-    end,
+    "stevearc/dressing.nvim",
+    opts = {},
   },
   "nvim-tree/nvim-web-devicons",
 }
