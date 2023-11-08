@@ -41,4 +41,23 @@ or just `git clone` this repository to the Neovim configuration folder
 
 ## Shortcuts
 
+`<leader>` key is Neovim default
+
+|    Shortcut    | Action                               |
+| :------------: | :----------------------------------- |
+|  `<Tab><Tab>`  | Select buffer                        |
+|    `<Tab>q`    | Close buffer                         |
+|    `<Tab>Q`    | Force close buffer (even if unsaved) |
+|     `<F1>`     | List help tags                       |
+|     `<F2>`     | Rename (using LSP)                   |
+|     `<F3>`     | Grep in files                        |
+|     `<F4>`     | List files                           |
+| `<leader><F4>` | List files with hidden               |
+|     `<F5>`     | Format                               |
+|     `<F6>`     | Open file explorer (Neotree)         |
+|     `<F7>`     | Show LSP hover                       |
+|    `<F12>s`    | Toggle autosave (default: on)        |
+
+## Tmux
+
 > TODO
