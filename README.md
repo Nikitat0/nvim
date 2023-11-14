@@ -56,6 +56,7 @@ or just `git clone` this repository to the Neovim configuration folder
 |     `<F5>`     | Format                               |
 |     `<F6>`     | Open file explorer (Neotree)         |
 |     `<F7>`     | Show LSP hover                       |
+|    `<F10>`     | Open markdown preview                |
 |    `<F12>s`    | Toggle autosave (default: on)        |
 
 ## Tmux
