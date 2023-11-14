@@ -49,7 +49,7 @@ return {
           pickers.colorscheme { enable_preview = true }
         end,
       }
-      keymap { "<Tab><Tab>", pickers.buffers }
+      keymap { "<Tab>", pickers.buffers }
     end,
   },
   {
