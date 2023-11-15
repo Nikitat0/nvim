@@ -14,7 +14,12 @@ return {
           python = { require("formatter.filetypes.python").autopep8 },
           rust = { require("formatter.filetypes.rust").rustfmt },
           ["*"] = {
-            require("formatter.filetypes.any").remove_trailing_whitespace,
+            function()
+              if vim.bo.filetype ~= "markdown" then
+                return require("formatter.filetypes.any").remove_trailing_whitespace()
+              end
+              return nil
+            end,
           },
         },
       }
