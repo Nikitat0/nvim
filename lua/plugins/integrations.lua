@@ -21,7 +21,7 @@ return {
       return os.execute "xkb-switch" == 0
     end,
     init = function()
-      require "xkbswitch"
+      require("xkbswitch").setup()
     end,
   },
 }
