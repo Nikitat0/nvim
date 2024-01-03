@@ -44,7 +44,12 @@ return {
           pickers.colorscheme { enable_preview = true }
         end,
       }
-      keymap { "<Tab>", pickers.buffers }
+      keymap {
+        "<Tab>",
+        function()
+          pickers.buffers { ignore_current_buffer = true, sort_mru = true }
+        end,
+      }
     end,
   },
   {
