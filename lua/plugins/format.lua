@@ -9,6 +9,7 @@ return {
         filetype = {
           c = { require("formatter.filetypes.c").clangformat },
           cpp = { require("formatter.filetypes.cpp").clangformat },
+          javascript = { require("formatter.filetypes.javascript").prettier },
           lua = { require("formatter.filetypes.lua").stylua },
           markdown = { require("formatter.filetypes.markdown").prettier },
           python = { require("formatter.filetypes.python").autopep8 },
