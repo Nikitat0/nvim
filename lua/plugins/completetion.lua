@@ -9,14 +9,23 @@ return {
   {
     "rafamadriz/friendly-snippets",
     name = "snippets",
+    dependencies = { "luasnip" },
     init = function()
       require("luasnip.loaders.from_vscode").lazy_load()
     end,
   },
   {
     "hrsh7th/nvim-cmp",
-    -- TODO: Remove dependency on snippets
-    dependencies = { "luasnip", "snippets" },
+    dependencies = {
+      "luasnip",
+      "snippets",
+      "FelipeLema/cmp-async-path",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp",
+      "petertriho/cmp-git",
+      "saadparwaiz1/cmp_luasnip",
+    },
     init = function()
       local luasnip = require "luasnip"
       local cmp = require "cmp"
@@ -76,10 +85,4 @@ return {
       end
     end,
   },
-  "FelipeLema/cmp-async-path",
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-cmdline",
-  "hrsh7th/cmp-nvim-lsp",
-  "petertriho/cmp-git",
-  "saadparwaiz1/cmp_luasnip",
 }
