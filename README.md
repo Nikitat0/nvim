@@ -46,6 +46,7 @@ or just `git clone` this repository to the Neovim configuration folder
 |    Shortcut    | Action                               |
 | :------------: | :----------------------------------- |
 |    `<Tab>`     | Select buffer                        |
+|  `<Tab><Tab>`  | Go to previous buffer                |
 |    `<Tab>q`    | Close buffer                         |
 |    `<Tab>Q`    | Force close buffer (even if unsaved) |
 |     `<F1>`     | List help tags                       |
