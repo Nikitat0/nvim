@@ -4,7 +4,7 @@ return {
   {
     "mhartington/formatter.nvim",
     init = function()
-      keymap { "<F5>", "<Cmd>FormatWrite<CR>" }
+      keymap { "<F5>", "<Cmd>Format<CR>" }
       require("formatter").setup {
         filetype = {
           c = { require("formatter.filetypes.c").clangformat },
