@@ -2,23 +2,17 @@ local keymap = require "keymap"
 
 return {
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "plenary",
-      "nui",
-    },
+    "stevearc/oil.nvim",
+    opts = {},
     init = function()
-      require("neo-tree").setup {
-        filesystem = {
-          follow_current_file = {
-            enabled = true,
-          },
-          hijack_netrw_behavior = "open_current",
-          use_libuv_file_watcher = true,
-        },
+      local oil = require "oil"
+      keymap { "<F6>", oil.open }
+      keymap {
+        "<leader><F6>",
+        function()
+          oil.open(vim.fn.getcwd())
+        end,
       }
-      keymap { "<F6>", "<Cmd>Neotree toggle reveal position=current<CR>" }
     end,
   },
   {
