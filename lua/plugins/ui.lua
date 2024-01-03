@@ -54,7 +54,12 @@ return {
   },
   {
     "stevearc/dressing.nvim",
-    opts = {},
+    dependencies = "telescope",
+    opts = {
+      input = {
+        insert_only = false,
+      },
+    },
   },
   "nvim-tree/nvim-web-devicons",
 }
