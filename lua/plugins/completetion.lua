@@ -36,13 +36,11 @@ return {
             luasnip.lsp_expand(args.body)
           end,
         },
-        -- TODO: Maybe reorder sources?
-        sources = cmp.config.sources {
-          { name = "nvim_lsp" },
+        sources = cmp.config.sources({
           { name = "luasnip" },
+          { name = "nvim_lsp" },
           { name = "async_path" },
-          { name = "buffer" },
-        },
+        }, { { name = "buffer" }, { name = "async_path" } }),
         mapping = {
           ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
@@ -77,7 +75,12 @@ return {
       }
       cmp.setup.filetype(
         "gitcommit",
-        { sources = cmp.config.sources { { name = "cmp_git" } } }
+        {
+          sources = cmp.config.sources {
+            { name = "cmp_git" },
+            { name = "buffer" },
+          },
+        }
       )
       -- TODO: Setup cmdline autocompletetion
       for _, mode in ipairs { "/", "?" } do
