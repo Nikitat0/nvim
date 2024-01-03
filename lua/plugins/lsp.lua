@@ -3,9 +3,7 @@ local keymap = require "keymap"
 return {
   {
     "williamboman/mason-lspconfig.nvim",
-    dependencies = { "mason", "lspconfig" },
     init = function()
-      -- TODO: fix mason double setup
       require("mason").setup()
       require("mason-lspconfig").setup()
       require("mason-lspconfig").setup_handlers {

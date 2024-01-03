@@ -8,7 +8,6 @@ return {
     vim.cmd "MasonUpdate"
   end,
   init = function()
-    require("mason").setup()
     keymap { "<F12>t", "<Cmd>Mason<CR>" }
   end,
 }
