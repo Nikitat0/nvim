@@ -23,9 +23,9 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
     branch = "0.1.x",
     name = "telescope",
-    dependencies = { "plenary" },
     init = function()
       local pickers = require "telescope.builtin"
       keymap { "<F1>", pickers.help_tags }
