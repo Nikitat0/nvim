@@ -17,6 +17,7 @@ return {
   },
   {
     "nvim-lualine/lualine.nvim",
+    events = "Colorscheme",
     init = function()
       require("lualine").setup()
     end,
